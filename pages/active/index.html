@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/sy-c.css">
+    <title>最新活动</title>
+    <style>
+
+        .banner {
+            transition: all ease 1s;
+            height: 270px;
+            background: url(img/banner.png) no-repeat center;
+            background-size: cover;
+        }
+        .banner:hover {
+            background-image: url(img/banner1.png);
+        }
+        .content li {
+            height: 200px;
+            position: relative;
+            border: 1px solid #dbdbdb;
+            transition: all ease 1s;
+        }
+        .content .main {
+            width: fit-content;
+            margin: auto;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .time {
+            /* height: 100%; */
+            color: #929292;
+            width: fit-content;
+            float: left;
+            margin-right: 34px;
+        }
+        .t-d {
+            font-size: 60px;
+        }
+        .t-x {
+            font-size: 16px;
+            text-align: right;
+            margin-top: 20px;
+        }
+        .word {
+            float: left;
+            width: 500px;
+        }
+        .word h1 {
+            font-size: 16px;
+            color: #000000;
+        }
+        .word .sp{
+            margin-top: 32px;
+            font-size: 12px;
+            line-height: 22px;
+            color: #4d4d4d;
+        }
+        .main a {
+            float: left;
+            width: 120px;
+            height: 96px;
+            background: url(img/right.png) no-repeat center;
+            display: none;
+        }
+        .content li:hover {
+            background-color: #444444;
+        }
+        .content li:hover .time{
+            color: #fff;
+        }
+        .content li:hover h1 {
+            color: #fff;
+        }
+        .content li:hover .sp {
+            color: #fff;
+        }
+        .content li:hover a {
+            display: block;
+        }
+        .content li.active {
+            background-color: #444444;
+        }
+        .content li.active .time{
+            color: #fff;
+        }
+        .content li.active h1 {
+            color: #fff;
+        }
+        .content li.active .sp {
+            color: #fff;
+        }
+        .content li.active a {
+            display: block;
+        }
+        .fy {
+            width: fit-content;
+            margin: auto;
+            position: relative;
+            margin: 30px auto 60px;
+        }
+        .fy li {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 1px solid #c9c9c9;
+            text-align: center;
+            font-size: 14px;
+            line-height: 28px;
+            color: #c9c9c9;                
+        }
+        .fy li:hover {
+            background-color: #6d6d6d;
+            color: #fefefe;
+        }
+        .fy li.active {
+            margin-right: 10px;
+            background-color: #6d6d6d;
+            color: #fefefe;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-c">
+            <div class="logo">
+                <div class="l-name">
+                    VERONICA
+                </div>
+                <div class="l-time">1820-2018</div>
+            </div>
+            <ul class="nav">
+                <li>
+                    <a href="../../index.html" target="_blank">首页</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="../wedding/index.html" target="_blank">婚纱礼服</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="../jew/index.html" target="_blank">珠宝配饰</a>
+                    <div class="line"></div>
+                </li>
+                <li class="active">
+                    <a  href="index.html">最新活动</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="../aboutus/index.html" target="_blank">关于我们</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="../designer/index.html" target="_blank">设计师</a>
+                    <div class="line"></div>
+                </li>    
+            </ul>
+        </div>
+    </div>
+    <div class="banner"></div>
+    <div class="con-top">
+        <div class="con-top-h1">最新活动</div>
+        <div class="con-top-h2">Latest Activities</div>
+    </div>
+    <ul class="content">
+        <li class="active">
+            <div class="main">
+                <div class="time">
+                    <div class="t-d">06-18</div>
+                    <div class="t-x">2018</div>
+                </div>
+                <div class="word">
+                    <h1>Her Style 2017/18春夏米兰婚纱礼服流行发布</h1>
+                    <div class="sp">
+                        Rick Owens 2011/12秋冬巴黎男装流行发布 纵观这场秀的主题，你可以想尽各种荒诞的元素，都不足以来描述这场“怪诞”的晚餐。Thom大叔将他一向怪诞风趣的服装风格...                    
+                    </div>
+                </div>
+                <a href="#"></a>
+            </div>
+        </li>
+        <li>
+            <div class="main">
+                <div class="time">
+                    <div class="t-d">02-26</div>
+                    <div class="t-x">2018</div>
+                </div>
+                <div class="word">
+                    <h1>VERONICA服饰与美容独家专访</h1>
+                    <div class="sp">
+                        《THE LITTLE BLACK JACKET》摄影展去年在巴黎、东京、纽约、伦敦、米兰等国际都会展出，反响非常热烈。今年，摄影展登录上海和北京两大城市舞台，增加多位艺文界...                
+                    </div>
+                </div>
+                <a href="#"></a>
+            </div>
+        </li>
+        <li>
+            <div class="main">
+                <div class="time">
+                    <div class="t-d">06-18</div>
+                    <div class="t-x">2018</div>
+                </div>
+                <div class="word">
+                    <h1>圣诞高级定制发布会</h1>
+                    <div class="sp">
+                        摄影展在北京酒仙桥路798艺术区旁的751D•PARK的第一车间盛大揭幕。开幕红毯名流云集，Vogue第一时间带来现场盛况...                
+                    </div>
+                </div>
+                <a href="#"></a>
+            </div>
+        </li>
+
+    </ul>
+    <ul class="fy">
+        <li class="active">1</li>
+        <li>2</li> 
+    </ul>
+    <div class="footer">
+        <div class="footer-c">
+            <div class="f-left">
+                网站备案号：豫ICP备110121210号<br>
+                <br>
+                增值电信业务经营许可证号：豫B2-20100033
+            </div>
+            <div class="f-right">
+                <span><img src="img/商标.png" alt=""> 2018 VERONICA</span>
+                <a href="#">联系我们</a>
+                <a href="#">加入我们</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

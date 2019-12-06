@@ -1,0 +1,101 @@
+.header {
+    height: 80px;
+}
+.footer {
+    height: 100px;
+    background-color: #4d4d4d;
+}
+.header-c,
+.banner-c,
+.content-c,
+.footer-c {
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    /* background-color:rgba(143, 241, 118,.3); */
+    overflow: hidden;
+}
+.header-c {
+    width: 1080px;
+}
+.header .logo {
+    float: left;
+    margin-top: 14px; 
+}
+.header .logo .l-name {
+    font-size: 36px;
+    color: #1b1b1b;
+    margin: auto;
+}
+.header .logo .l-time {
+    font-size: 11px;
+    color: #1c1c1c;
+    text-align: center;
+}
+.header .nav {
+    margin-top: 28px;
+    font-size: 16px;
+    float: right;
+}
+.header .nav li {
+    width: 64px;
+    margin-left: 50px;
+    text-align: center;
+    display: inline-block;
+}
+.header .nav a {
+    display: block;
+    color: #666666;
+    margin: center;
+}
+.header .nav .line {
+    height: 1px;
+    width: 64px;
+    margin-top: 5px;
+}
+.header .nav li:hover a {
+    color: #1d1d1d;
+}
+.header .nav li:hover .line {
+    background-color:#b9ab77;
+}
+.header .nav li.active a {
+    color: #1d1d1d;
+}
+.header .nav li.active .line {
+    background-color:#b9ab77;
+}
+
+
+
+
+
+
+/*        footer          */
+.footer-c {
+    color: #fff;
+    font-size: 12px;
+    background-color: #4d4d4d;
+    position: relative;
+}
+.f-left {
+    font-size: 12px;
+    margin-top: 32px;
+}
+.f-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+.footer span,
+.footer a{
+    display:inline-block;
+    margin-right: 50px;
+}
+.footer a{
+    color: #fff;
+}
+
+
+

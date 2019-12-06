@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/sy-c.css">
+    <title>婚纱首页</title>
+    <style>
+        .footer, 
+        .footer-c {
+            background-color: #ffffff;
+            color: #323232;
+        }
+        .footer a {
+            color: #323232;
+        }
+
+
+
+        /*     banner    */
+        .banner {
+            height: 720px;
+            background: url(img/banner.png) no-repeat center;
+            background-size: cover;
+        }
+        .banner-c {
+            position: relative;
+            font-size: 20px;
+            overflow: visible;
+        }
+        .banner .arr {
+            width: 50px;
+            height: 79px;
+            cursor: pointer;
+        }
+        .banner .arr.l {
+            background: rgba(175, 112, 103, .25) url(img/箭头l.png) no-repeat center;
+            position: absolute;
+            top: 50%;
+            left: -50px;
+            transform: translate(0,-50%);
+        }
+        .banner .arr.r {
+            background: rgba(175, 112, 103, .25) url(img/箭头r.png) no-repeat center;
+            position: absolute;
+            top: 50%;
+            right: -50px;
+            transform: translate(0,-50%);
+        }
+        .banner .arr:hover {
+            background-color: #b9ab77;
+        }
+        .b-more {
+            width: 216px;
+            height: 61px;
+            background: url(img/b-m.png) no-repeat;
+            position: absolute;
+            bottom: 220px;
+            right: 60px;
+        }
+        .banner ul {
+            position: absolute;
+            left: 50%;
+            bottom: 21px;
+            transform: translate(-50%, 0);
+        }
+        .banner .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #6c6c6c;
+            border: 5px solid rgba(108, 108, 108, 0);
+            background-clip: content-box;
+            margin-left: 21px;
+        }
+        .banner .dot:hover {
+            border-color: rgba(108, 108, 108, 1);
+            background-color: #ffffff;
+        }
+        .banner .dot.active {
+            margin-left: 0;
+            /* border-color: rgba(108, 108, 108, 1);
+            background-color: #ffffff; */
+        }
+        
+
+
+
+        /* 婚纱礼服 */
+
+        .hs-main {
+            width: 1200px;
+            margin: auto;
+        }
+        .hs-subnav {
+            width: fit-content;
+            margin: auto;
+            overflow: hidden;
+        }
+        .hs-subnav li {
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            color: #4d4d4d;
+            cursor: pointer;
+            margin-left: 90px;
+        }
+        .hs-subnav li.new {
+            margin-left: 0;
+        }
+        .hs-subnav li .hs-dot {
+            border-radius: 50%;
+            width: 4px;
+            height: 4px;
+            margin: auto;
+            margin-top: 12px;
+        }
+        .hs-subnav li:hover {
+            color: #b9ab77;
+        }
+        .hs-subnav li:hover .hs-dot {
+            background-color: #b9ab77;
+        }
+        .hs-subnav .new.active  {
+            color: #b9ab77;
+        } 
+        .hs-subnav .new.active .hs-dot {
+            background-color: #b9ab77;
+        }
+
+        .hs-su-main {
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .hs-su-main li {
+            float: left;
+            width: 270px;
+            height: 360px;
+            margin-left: 40px;
+        }
+        .hs-su-main li .wzjs{
+            height: 100%;
+            text-align: center;
+            background-color: rgba(41, 41, 41, .3);
+            color: #fff;
+            position: relative;
+            display: none;
+        }
+        .hs-su-main .wzjs-t {
+            margin: auto;
+            font-size: 14px;
+            position: absolute;
+            top: 125px;
+            right: 50%;
+            transform: translate(50%, 0);
+        }
+        .hs-su-main .wzjs-b {
+            margin: auto;
+            font-size: 12px;
+            position: absolute;
+            bottom: 150px;
+            right: 50%;
+            transform: translate(50%, 0);
+        }
+        .hs-su-main li:hover .wzjs {
+            display: block;
+        }
+
+        .hs-su-main .n1 {
+            margin-left: 0;
+            background-image: url(img/new1.png);
+        }
+        .hs-su-main .n2 {
+            background-image: url(img/newh2.png);
+        }
+        .hs-su-main .n3 {
+            background-image: url(img/newh3.png);
+        }
+        .hs-su-main .n4 {
+            background-image: url(img/newh4.png);
+        }
+        .hs-su-main .n1:hover {
+            background-image: url(img/new1-1.png);
+        }
+        .hs-su-main .n2:hover {
+            background-image: url(img/new2-1.png);
+        }
+        .hs-su-main .n3:hover {
+            background-image: url(img/new3-1.png);
+        }
+        .hs-su-main .n4:hover {
+            background-image: url(img/new4-1.png);
+        }
+        .hs-su-main .n1.active .wzjs{
+            display: block;
+        }
+
+
+
+        /*           珠宝配饰         */
+        .con-zb {
+            background-color: #f9f9f9;
+        }
+        .zb-main {
+            width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .zb-main li {
+            float: left;
+            width: 270px;
+            height: 180px;
+            margin-left: 40px;
+            position: relative;
+        }
+        .zb-main li .mc {
+            height: 100%;
+            background-color: rgba(0, 0, 0, .6);
+            display: none;
+        }
+        .zb-main li .js {
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-indent: 16px;
+            background-color: rgba(0, 0, 0, .3);
+            display: none;
+        }
+        .zb-main .js .t {
+            color: #fff;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+        .zb-main .js .b {
+            color: #c1c1c1;
+            font-size: 12px;
+            margin-top: 12px;
+        }
+        .zb-main li:hover .js {
+            display: block;
+        }
+        .zb-main li:hover .mc {
+            display: block;
+        }
+        .zb-main .zb1.active .js {
+            display: block;
+        }
+
+        .zb-main li.zb1{
+            margin-left: 0;
+            background-image: url(img/zb1.png);
+        }
+        .zb-main li.zb2{
+            background-image: url(img/zb2.png);
+        }
+        .zb-main li.zb3{
+            background-image: url(img/zb3.png);
+        }
+        .zb-main li.zb4{
+            background-image: url(img/zb4.png);
+        }
+
+
+
+        /*              最新活动             */
+        .con-hd {
+            height: 668px;
+            background: url(img/con-hd-b.png) no-repeat top;
+        }
+        .con-hd-c {
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            position: relative;
+        }
+        .con-hd ul {
+            position: absolute;
+            top: 169px;
+            left: 0;
+            overflow: hidden;
+        }
+        .con-hd .con-hd-c .con-more {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+        .con-hd li {
+            float: left;
+            width: 220px;
+            height: 334px;
+            color: #8b8b8b;
+            padding:44px 40px 0;
+            background-color: #ffffff;
+            position: relative;
+        }
+        .con-hd-c .hd-t-d {
+            display: inline-block;
+            font-size: 30px;
+            margin-right: 15px;
+        }
+        .con-hd-c .hd-t-x {
+            display: inline-block;
+            font-size: 14px;
+        }
+        .con-hd-c .hd-h1 {
+            color: #000000;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+        .con-hd-c .hd-sp {
+            font-size: 13px;
+            margin-top: 16px;
+            line-height: 23px;
+        }
+        .con-hd-c li a {
+            display: block;
+            color: #bebebe;
+            font-size: 14px;
+            vertical-align: middle;
+            position: absolute;
+            left: 40px;
+            bottom: 80px;
+        }
+        .hd-more img {
+            vertical-align: middle;
+        }
+        .con-hd-c li.hd-img {
+            width: 300px;
+            height: 334px;
+            padding: 0;
+            background: #3c3c3c url(img/con-hd.png) no-repeat center;
+        }
+        .hd-img .img-bk {
+            width: 288px;
+            height: 321px;
+            border: 1px #c3c3c3 solid;
+            margin: 7px 5px 6px 7px;
+        } 
+
+
+
+        /*                 设计师              */
+        .con-sjs .con-top-h1 {
+            color: #f7f5f5;
+        }
+        .con-sjs {
+            background-color: #4d4d4d;
+            /* height: 664px; */
+            overflow: hidden;
+            position: relative;
+        }
+        .con-sjs-c {
+            width: 1200px;
+            color: #b9b9b9;
+            font-size: 12px;
+            margin: auto;
+            overflow: hidden;
+            text-align: center;
+        }
+        .con-sjs-c li {
+            float: left;
+            width: 277px;
+            height: 452px;
+            padding: 0 61.5px;
+            position: relative;
+        }
+        .con-sjs-c .sjs-img {
+            width: 180px;
+            height: 180px;
+            margin: auto;
+            border-radius: 50%;
+        }
+        .con-sjs-c .sjs-name {
+            color: #f7f5f5;
+            font-size: 24px;
+            margin-top: 25px;
+        }
+        .con-sjs-c .sjs-zw {
+            margin-top: 10px;
+        }
+        .con-sjs-c .sjs-js {
+            margin-top: 15px;
+            line-height: 21px;
+        }
+        .con-sjs-c .sjs-img.w {
+            background: url(img/sjs1.png) no-repeat center;
+        }
+        .con-sjs-c .sjs-img.y {
+            background: url(img/sjs2.png) no-repeat center;
+        }
+        .con-sjs-c .sjs-img.j {
+            background: url(img/sjs3.png) no-repeat center;
+        }
+
+
+
+        /*     more    */
+
+        .con-sjs-c .sjs-more {
+            width: 150px;
+            height: 43px;
+            color: #bbbaba;
+            text-align: center;
+            line-height: 43px;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid #f5f5f5;
+            position: absolute;
+            bottom: 60px;
+            right: 50%;
+            transform: translate(50%, 0);
+        }
+        .sjs-more .sjs-r {
+            position: absolute;
+            top: 14.5px;
+            right: 50px;
+            width: 7px;
+            height: 14px;
+        }
+        .sjs-more:hover {
+            color: #b9ab77;
+            border-color: #b9ab77;
+        }
+        .sjs-more:hover .sjs-r {
+            background: url(img/sjs-r.png) no-repeat center;
+        }
+        .con-sjs .triangle {
+            height: 0;
+            width: 0;
+            border-left:280px solid #3d3d3d; 
+            border-top: 664px solid transparent;           
+            position: absolute;   
+            top: 0;
+            left: 0;
+        }
+        .con-sjs .trapezium {
+            width: 54px;
+            height: 5px;
+            border-top: 664px solid #525252;
+            border-left: 150px solid transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-c">
+            <div class="logo">
+                <div class="l-name">
+                    VERONICA
+                </div>
+                <div class="l-time">1820-2018</div>
+            </div>
+            <ul class="nav">
+                <li class="active">
+                    <a href="index.html ">首页</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="pages/wedding/index.html" target="_blank">婚纱礼服</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="pages/jew/index.html" target="_blank">珠宝配饰</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="pages/active/index.html " target="_blank">最新活动</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href=" pages/aboutus/index.html" target="_blank">关于我们</a>
+                    <div class="line"></div>
+                </li>
+                <li>
+                    <a href="pages/designer/index.html" target="_blank">设计师</a>
+                    <div class="line"></div>
+                </li>    
+            </ul>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-c">
+            <div class="arr l"></div>
+            <div class="arr r"></div>
+            <div class="b-more"></div>
+            <ul>
+                <li class="dot active"></li>
+                <li class="dot"></li>
+            </ul>
+        </div>  
+    </div>
+
+    <div class="con-hs">
+        <div class="con hs">
+            <div class="con-top">
+                <div class="con-top-h1">婚纱礼服</div>
+                <div class="con-top-h2">Wedding Dress</div>
+            </div>
+            <div class="hs-main">
+                <ul class="hs-subnav">
+                    <li class="new active">
+                        新品/NEW
+                        <div class="hs-dot"></div>
+                    </li>
+                    <li class="cx">
+                        2018春夏
+                        <div class="hs-dot"></div>
+                    </li>
+                    <li class="qd">
+                        2018秋冬
+                        <div class="hs-dot"></div>
+                    </li>
+                    <li class="dz">
+                        专属定制
+                        <div class="hs-dot"></div>
+                    </li>
+                </ul>
+                <ul class="hs-su-main">
+                    <li class="n1 active">
+                        <div class="wzjs">
+                            <div class="wzjs-t">HER STYLE / 一字肩拖尾主纱</div>
+                            <div class="wzjs-b">
+                                $5389.00<br>
+                                <br>
+                                白色 / M / VK2531
+                            </div>
+                        </div>
+                    </li>
+                    <li class="n2">
+                        <div class="wzjs">
+                            <div class="wzjs-t">HER STYLE / 一字肩拖尾主纱</div>
+                            <div class="wzjs-b">
+                                $5389.00<br>
+                                <br>
+                                白色 / M / VK2531
+                            </div>
+                        </div>
+                    </li>
+                    <li class="n3">
+                        <div class="wzjs">
+                            <div class="wzjs-t">HER STYLE / 一字肩拖尾主纱</div>
+                            <div class="wzjs-b">
+                                $5389.00<br>
+                                <br>
+                                白色 / M / VK2531
+                            </div>
+                        </div>
+                    </li>
+                    <li class="n4">
+                        <div class="wzjs">
+                            <div class="wzjs-t">HER STYLE / 一字肩拖尾主纱</div>
+                            <div class="wzjs-b">
+                                $5389.00<br>
+                                <br>
+                                白色 / M / VK2531
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <a class="con-more" href="pages/wedding/index.html">more</a>
+        </div>
+    </div>
+    <div class="con-zb">
+        <div class="con zb">
+            <div class="con-top">
+                <div class="con-top-h1">珠宝配饰</div>
+                <div class="con-top-h2">Jewelry Show</div>
+            </div>
+            <ul class="zb-main">
+                <li class="zb1 active">
+                    <div class="mc"></div>
+                    <div class="js">
+                        <p class="t">传世之作，经典重现</p>
+                        <p class="b">维罗尼卡倾情呈现“斑斓之境”（The ...</p>
+                    </div>
+                </li>
+                <li class="zb2">
+                    <div class="mc"></div>
+                    <div class="js">
+                        <p class="t">传世之作，经典重现</p>
+                        <p class="b">维罗尼卡倾情呈现“斑斓之境”（The ...</p>
+                    </div>
+                </li>
+                <li class="zb3">
+                    <div class="mc"></div>
+                    <div class="js">
+                        <p class="t">传世之作，经典重现</p>
+                        <p class="b">维罗尼卡倾情呈现“斑斓之境”（The ...</p>
+                    </div>
+                </li>
+                <li class="zb4">
+                    <div class="mc"></div>
+                    <div class="js">
+                        <p class="t">传世之作，经典重现</p>
+                        <p class="b">维罗尼卡倾情呈现“斑斓之境”（The ...</p>
+                    </div>
+                </li>
+            </ul>
+            <a class="con-more" href="pages/jew/index.html">more</a>
+        </div>
+    </div>
+    <div class="con-top">
+        <div class="con-top-h1">最新活动</div>
+        <div class="con-top-h2">Latest Activities</div>
+    </div>
+    <div class="con-hd">
+        <div class="con-hd-c">
+            <ul>
+                <li>
+                    <div class="hd-t-d">06-18</div>
+                    <div class="hd-t-x">2018</div>
+                    <div class="hd-h1">新品发布会</div>
+                    <div class="hd-sp">伴随着T台两侧色彩趋势报告的发布， VERONICA2017婚纱新品发布会正...</div>
+                    <a  href="#">more <img src="img/hd右箭头.png" alt=""></a>
+                </li>
+                <li class="hd-img"><div class="img-bk"></div></li>
+                <li>
+                    <div class="hd-t-d">12-24</div>
+                    <div class="hd-t-x">2017</div>
+                    <div class="hd-h1">圣诞高级定制发布会</div>
+                    <div class="hd-sp">《金字塔铭文》中有这样的话：“天空 把自己的光芒伸向你，以便你可以去到...</div>
+                    <a  href="#">more <img src="img/hd右箭头.png" alt=""></a>
+                </li>
+                <li>
+                    <div class="hd-t-d">06-21</div>
+                    <div class="hd-t-x">2017</div>
+                    <div class="hd-h1">夏季新品发布会</div>
+                    <div class="hd-sp">“我非常欣赏并且热爱美国。因为 这里是我获得成功的地方。在许...</div>
+                    <a  href="#">more <img src="img/hd右箭头.png" alt=""></a>
+                </li>
+            </ul>
+            <a class="con-more" href="pages/active/index.html">more</a>
+        </div>
+    </div>
+    <div class="con-sjs">
+        <div class="con-top">
+            <div class="con-top-h1">设计师</div>
+            <div class="con-top-h2">Designers</div>
+        </div>
+        <ul class="con-sjs-c">
+            <li>
+                <div class="sjs-img w"></div>
+                <div class="sjs-name">Jason . W</div>
+                <div class="sjs-zw">首席设计师</div>
+                <div class="sjs-js">法国时装设计师，VERONICA品牌创始人之一，设计 总监，2016福布斯最具影响力的设计师...</div>
+                <a class="sjs-more" href="pages/designer/index.html">
+                    more <div class="sjs-r"></div>
+                </a>
+            </li>
+            <li>
+                <div class="sjs-img y"></div>
+                <div class="sjs-name">颜澈</div>
+                <div class="sjs-zw">资深设计师</div>
+                <div class="sjs-js">设计界的“设计鬼才”从题材到表现方式都引起了极大 的福布斯中国最具潜力，每一个产品都是我们精... </div>
+                <a class="sjs-more" href="pages/designer/index.html">
+                    more <div class="sjs-r"></div>
+                </a>
+            </li>
+            <li>
+                <div class="sjs-img j"></div>
+                <div class="sjs-name">Katherine .J </div>
+                <div class="sjs-zw">运营总监</div>
+                <div class="sjs-js">The world's leading electronic design journal  NEWWEBPICK recom</div>
+                <a class="sjs-more" href="pages/designer/index.html">
+                    more <div class="sjs-r"></div>
+                </a>
+            </li>
+        </ul>
+        <div class="triangle"></div>
+        <div class="trapezium"></div>
+    </div>
+    <div class="footer">
+        <div class="footer-c">
+            <div class="f-left">
+                网站备案号：豫ICP备110121210号<br>
+                <br>
+                增值电信业务经营许可证号：豫B2-20100033
+            </div>
+            <div class="f-right">
+                <span><img src="img/商标-h.png" alt=""> 2018 VERONICA</span>
+                <a href="#">联系我们</a>
+                <a href="#">加入我们</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
