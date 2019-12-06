@@ -31,16 +31,19 @@
             text-align: right;
         }
         .t1 .ht {
-            
-            height: 70px;
             color: #2a2a2a;
             font-size: 30px;
-            padding-top: 5px;
+            line-height: 70px;
+            position: relative;
             border-left: 2px solid #454545;
         }
-        .t1 .ht span {
+        .t1 .ht-r {
             color: #4c4c4c;
             font-size: 16px;
+            line-height: 16px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
         .t1 h3 {
             color: #c1c1c1;
@@ -70,6 +73,10 @@
             right: 50%;
             bottom: 60px;
             transform: translate(50%, 0);
+        }
+        .m1 .bot:hover {
+            background-color: #b9ab77;
+            color: #ffffff;
         }
         .m2 {
             color: #6a6a6a;
@@ -102,6 +109,10 @@
             background-color: #f7f5f5;
             padding: 8px;
             margin: 0 40px 40px 0;
+        }
+        .b-nav a:hover {
+            color: #000000;
+            border-color: #b9ab77;
         }
         .b-main {
             overflow: hidden;
@@ -156,7 +167,10 @@
             right: -46px;
             top: 50%;
             /* transform: translate(0, -50%); */
-        }   
+        }
+        .icon:hover {
+            background-color: #b9ab77;
+        }
     </style>
 </head>
 <body>
@@ -203,8 +217,8 @@
                 <div class="word">
                     <div class="t1">
                         <div class="ht">
-                            一字肩拖尾主纱<br>
-                            <span>HER STYLE</span>
+                            一字肩拖尾主纱
+                            <div class="ht-r">HER STYLE</div>
                         </div>
                         <h3>
                             $5389.00<br>
@@ -245,8 +259,8 @@
                 <li class="ll6"></li>
             </ul>
 
-            <div class="left"></div>
-            <div class="right"></div>
+            <div class="icon left"></div>
+            <div class="icon right"></div>
         </div>
         <a class="con-more" href="">more</a>
     </div>

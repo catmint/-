@@ -31,16 +31,19 @@
             text-align: right;
         }
         .t1 .ht {
-            
-            height: 70px;
             color: #2a2a2a;
             font-size: 30px;
-            padding-top: 5px;
+            line-height: 70px;
+            position: relative;
             border-left: 2px solid #454545;
         }
-        .t1 .ht span {
+        .t1 .ht-r {
             color: #4c4c4c;
             font-size: 16px;
+            line-height: 16px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
         }
         .t1 h3 {
             color: #c1c1c1;
@@ -69,6 +72,10 @@
             right: 50%;
             bottom: 60px;
             transform: translate(50%, 0);
+        }
+        .m1 .bot:hover {
+            background-color: #b9ab77;
+            color: #ffffff;
         }
         .m2 {
             color: #6a6a6a;
@@ -99,8 +106,13 @@
             display: inline-block;
             color: #929292;
             background-color: #f7f5f5;
-            padding: 8px;
+            padding: 7px;
             margin: 0 40px 40px 0;
+            border: 1px solid transparent;
+        }
+        .b-nav a:hover {
+            color: #000000;
+            border-color: #b9ab77;
         }
         .b-main {
             overflow: hidden;
@@ -154,7 +166,7 @@
             color: #b9ab77;
             background-color: transparent;
         }
-        .left {
+        .icon.left {
             width: 32px;
             height: 50px;
             background: #8a8a8a url(img/jl.png) no-repeat center;
@@ -162,14 +174,17 @@
             left: -46px;
             top: 50%;
         }
-        .right {
+        .icon.right {
             width: 32px;
             height: 50px;
             background: #8a8a8a url(img/jr.png) no-repeat center;
             position: absolute;
             right: -46px;
             top: 50%;
-        }   
+        }
+        .icon:hover {
+            background-color: #b9ab77;
+        }
     </style>
 </head>
 <body>
@@ -216,8 +231,8 @@
                 <div class="word">
                     <div class="t1">
                         <div class="ht">
-                            HardWear系列<br>
-                            <span>对戒，耳饰</span>
+                            HardWear系列
+                            <div class="ht-r">对戒，耳饰</div>
                         </div>
                         <h3>$23199.00</h3>
                     </div>
@@ -280,8 +295,8 @@
                     </div>
                 </li>
             </ul>
-            <div class="left"></div>
-            <div class="right"></div>
+            <div class="icon left"></div>
+            <div class="icon right"></div>
         </div>
         <a class="con-more" href="">more</a>
     </div>
