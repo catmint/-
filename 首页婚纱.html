@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子</title>
+    <style>
+        .box {
+            margin: auto;
+            width: 1200px;
+            height: 420px;
+            position: relative;
+        }
+        .title {
+            width: fit-content;
+            height: 45px;
+            margin: auto;
+        }
+        .nav {
+            float: left;
+            line-height: 45px;
+            margin-left: 90px;
+            border-bottom: 1px solid transparent;
+
+        }
+        .nav:hover {
+            border-color: #b9ab77;
+            color: #b9ab77;
+        }   
+        .nav.new.active {
+            border-color: #b9ab77;
+            color: #b9ab77;
+        }   
+        .main {
+            width: 1200px;
+            height: 360px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .main .mc {
+            float: left;
+            width: 270px;
+            height: 100%;
+            margin-left: 40px;
+            background-color: red;
+            background: url(img/new1.png) no-repeat center;
+        }
+        .main .mc.n1 {
+            margin-left: 0;
+        }
+        .nav.new .n1 {
+            background-image: url(img/newh1.png);
+        }
+        .nav.new .n2 {
+            background-image: url(img/newh2.png);
+        }
+        .nav.new .n3 {
+            background-image: url(img/newh3.png);
+        }
+        .nav.new .n4 {
+            background-image: url(img/newh4.png);
+        }
+        .nav.cx .n1 {
+            background-image: url(img/new1.png);
+        }
+        .nav.cx .n2 {
+            background-image: url(img/new2.png);
+        }
+        .nav.cx .n3 {
+            background-image: url(img/new3.png);
+        }
+        .nav.cx .n4 {
+            background-image: url(img/new4.png);
+        }
+        .nav.qd .n1 {
+            background-image: url(img/new1-1.png);
+        }
+        .nav.qd .n2 {
+            background-image: url(img/new2-1.png);
+        }
+        .nav.qd .n3 {
+            background-image: url(img/new3-1.png);
+        }
+        .nav.qd .n4 {
+            background-image: url(img/new4-1.png);
+        }
+        .nav.zs .n1 {
+            background-image: url(img/newh1-1.png);
+        }
+        .nav.zs .n2 {
+            background-image: url(img/newh2-1.png);
+        }
+        .nav.zs .n3 {
+            background-image: url(img/newh3-1.png);
+        }
+        .nav.zs .n4 {
+            background-image: url(img/newh4-1.png);
+        }
+        .nav.cx .main {
+            display: none;
+        }
+        .nav.qd .main {
+            display: none;
+        }
+        .nav.zs .main {
+            display: none;
+        }
+
+        .nav.new.active .main {
+            display: block;
+        }
+        .nav.cx:hover .main {
+            display: block;
+        }
+        .nav.qd:hover .main {
+            display: block;
+        }
+        .nav.zs:hover .main {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="title">
+            <div class="nav new active">
+                新品 / new
+                <div class="main">
+                    <div class="mc n1"></div>
+                    <div class="mc n2"></div>
+                    <div class="mc n3"></div>
+                    <div class="mc n4"></div>
+                </div>
+            </div>
+            <div class="nav cx">
+                2018春夏
+                <div class="main">
+                    <div class="mc n1"></div>
+                    <div class="mc n2"></div>
+                    <div class="mc n3"></div>
+                    <div class="mc n4"></div>
+                </div>
+            </div>
+            <div class="nav qd">
+                2018秋冬
+                <div class="main">
+                    <div class="mc n1"></div>
+                    <div class="mc n2"></div>
+                    <div class="mc n3"></div>
+                    <div class="mc n4"></div>
+                </div>
+            </div>
+            <div class="nav zs">
+                专属定制
+                <div class="main">
+                    <div class="mc n1"></div>
+                    <div class="mc n2"></div>
+                    <div class="mc n3"></div>
+                    <div class="mc n4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
